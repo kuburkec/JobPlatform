@@ -1,4 +1,4 @@
-﻿using backend.Data;
+using backend.Data;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -34,10 +34,10 @@ builder.Services.AddAuthentication(x => {
     };
 });
 
-// 4. THE BRIDGE (CORS) - Allows React to talk to this API
+// 4. THE BRIDGE (CORS) - Allows React to talk to this APP
 builder.Services.AddCors(options => {
     options.AddPolicy("AllowReact", p => p
-        .AllowAnyOrigin()
+        .WithOrigins("https://job-platform-fn5s.vercel.app/") // Put your Vercel link here
         .AllowAnyHeader()
         .AllowAnyMethod());
 });
