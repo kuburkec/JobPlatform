@@ -1,0 +1,1 @@
+@tailwind base;@tailwind components;@tailwind utilities;@layer base{body{@apply bg-white text-gray-900 transition-colors duration-300;}.dark body{@apply bg-gray-900 text-gray-100;}}#root{min-height:100vh;display:flex;flex-direction:column}*{@apply transition-colors duration-200;}

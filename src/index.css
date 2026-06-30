@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-white text-gray-900 transition-colors duration-300;
+    }
+
+    .dark body {
+        @apply bg-gray-900 text-gray-100;
+    }
+}
+/* <--- This closing brace was likely missing or misplaced */
+
+/* Custom styles for your Job Board */
+#root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ensure smooth transitions for dark mode */
+* {
+    @apply transition-colors duration-200;
+}
